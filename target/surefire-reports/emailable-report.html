@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Carina Demo Tests - Mobile Sample (Android)</th></tr>
+<tr><td><a href="#t0">Mobile test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">1,281</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Carina Demo Tests - Mobile Sample (Android)</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Mobile test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.zebrunner.carina.demo.pages.MobileSampleTest</td><td><a href="#m0">AndroidApp</a></td><td rowspan="1">1712070116717</td><td rowspan="1">982</td></tr></tbody>
+</table>
+<h2>Mobile test</h2><h3 id="m0">com.zebrunner.carina.demo.pages.MobileSampleTest#AndroidApp</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">TEST [Mobile test - AndroidApp] FAILED at [20:31:57 2024-04-02] - java.net.URISyntaxException: Illegal character in authority at index 9: https://${LT_USERNAME}:${LT_ACCESS_KEY}pAR@mobile-hub.lambdatest.com/wd/hub
+
+io.appium.java_client.AppiumClientConfig.baseUrl(AppiumClientConfig.java:136)
+com.zebrunner.carina.webdriver.core.factory.impl.MobileFactory.create(MobileFactory.java:109)
+com.zebrunner.carina.webdriver.core.factory.DriverFactory.create(DriverFactory.java:89)
+com.zebrunner.carina.webdriver.IDriverPool.createDriver(IDriverPool.java:376)
+com.zebrunner.carina.webdriver.IDriverPool.getDriver(IDriverPool.java:122)
+com.zebrunner.carina.webdriver.IDriverPool.getDriver(IDriverPool.java:85)
+com.zebrunner.carina.webdriver.IDriverPool.getDriver(IDriverPool.java:73)
+com.zebrunner.carina.demo.pages.MobileSampleTest.AndroidApp(MobileSampleTest.java:41)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+java.base/java.lang.reflect.Method.invoke(Method.java:580)
+org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+java.base/java.lang.Thread.run(Thread.java:1570)</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.net.URISyntaxException: Illegal character in authority at index 9: https://${LT_USERNAME}:${LT_ACCESS_KEY}pAR@mobile-hub.lambdatest.com/wd/hub
+	at io.appium.java_client.AppiumClientConfig.baseUrl(AppiumClientConfig.java:136)
+	at com.zebrunner.carina.webdriver.core.factory.impl.MobileFactory.create(MobileFactory.java:109)
+	at com.zebrunner.carina.webdriver.core.factory.DriverFactory.create(DriverFactory.java:89)
+	at com.zebrunner.carina.webdriver.IDriverPool.createDriver(IDriverPool.java:376)
+	at com.zebrunner.carina.webdriver.IDriverPool.getDriver(IDriverPool.java:122)
+	at com.zebrunner.carina.webdriver.IDriverPool.getDriver(IDriverPool.java:85)
+	at com.zebrunner.carina.webdriver.IDriverPool.getDriver(IDriverPool.java:73)
+	at com.zebrunner.carina.demo.pages.MobileSampleTest.AndroidApp(MobileSampleTest.java:41)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: java.net.URISyntaxException: Illegal character in authority at index 9: https://${LT_USERNAME}:${LT_ACCESS_KEY}pAR@mobile-hub.lambdatest.com/wd/hub
+	at java.base/java.net.URI$Parser.fail(URI.java:2995)
+	at java.base/java.net.URI$Parser.parseAuthority(URI.java:3344)
+	at java.base/java.net.URI$Parser.parseHierarchical(URI.java:3240)
+	at java.base/java.net.URI$Parser.parse(URI.java:3196)
+	at java.base/java.net.URI.&lt;init&gt;(URI.java:645)
+	at java.base/java.net.URL.toURI(URL.java:1220)
+	at io.appium.java_client.AppiumClientConfig.baseUrl(AppiumClientConfig.java:134)
+	... 20 more
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
